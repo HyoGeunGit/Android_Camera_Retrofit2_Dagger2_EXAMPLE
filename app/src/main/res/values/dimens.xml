@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_all">16dp</dimen>
+    <dimen name="margin_start">16dp</dimen>
+    <dimen name="margin_start_half">8dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="margin_top_half">8dp</dimen>
+    <dimen name="margin_end">16dp</dimen>
+    <dimen name="margin_end_half">8dp</dimen>
+    <dimen name="margin_bottom">16dp</dimen>
+    <dimen name="margin_bottom_half">8dp</dimen>
+
+    <dimen name="padding_all">16dp</dimen>
+    <dimen name="padding_start">16dp</dimen>
+    <dimen name="padding_start_half">8dp</dimen>
+    <dimen name="padding_top">16dp</dimen>
+    <dimen name="padding_top_half">8dp</dimen>
+    <dimen name="padding_end">16dp</dimen>
+    <dimen name="padding_end_half">8dp</dimen>
+    <dimen name="padding_bottom">16dp</dimen>
+    <dimen name="padding_bottom_half">8dp</dimen>
+    <dimen name="radius_corner">6dp</dimen>
+    <dimen name="elevation">2dp</dimen>
+</resources>

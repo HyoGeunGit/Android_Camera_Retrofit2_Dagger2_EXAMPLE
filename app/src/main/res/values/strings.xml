@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Camera Upload Example</string>
+    <string name="permission_request">권한요청</string>
+    <string name="permission_request_context">권한요청</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="image_details">이미지 디테일</string>
+    <string name="image_placeholder">플레이스홀더</string>
+    <string name="title">타이틀</string>
+    <string name="description">설명</string>
+    <string name="success">성공</string>
+    <string name="upload_image">이미지 업로드</string>
+    <string name="take_a_photo">촬영</string>
+</resources>

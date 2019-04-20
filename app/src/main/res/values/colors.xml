@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="mainBrandColour">#afff86</color>
+    <color name="lightShade">#F7F7F6</color>
+    <color name="lightAccent">#c3ffb6</color>
+    <color name="darkShade">#36353E</color>
+    <color name="darkAccent">#00ff15</color>
+    <color name="successAccent">#609855</color>
+    <color name="warningAccent">#DD881D</color>
+    <color name="dangerAccent">#F44336</color>
+    <color name="lightAccentWhite">#FFF</color>
+    <color name="darkAccentGray">#A1A1A1</color>
+    <color name="transparent">#00000000</color>
+</resources>

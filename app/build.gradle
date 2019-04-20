@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "org.niralmehta.camerauploadexample"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            buildConfigField("String", "URI", "\"https://api.imgur.com/\"")
+            buildConfigField("String", "CLIENTID", "\"Client-ID f7db823d57471b7\"")
+            debuggable true
+        }
+        release {
+            applicationIdSuffix ".production"
+            buildConfigField("String", "URI", "\"https://api.imgur.com/\"")
+            buildConfigField("String", "CLIENTID", "\"Client-ID f7db823d57471b7\"")
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // Android
+    implementation(
+            deps.android.android_ktx,
+            deps.android.app_compat,
+            deps.android.constraint_layout,
+            deps.android.design,
+            deps.android.recyclerview,
+            deps.android.v4
+    )
+
+    // Arch
+    implementation(
+            deps.arch.room_runtime,
+            deps.arch.lifecycle_extensions,
+    )
+    kapt(
+            deps.arch.room_compiler,
+            deps.arch.lifecycle_compiler
+    )
+
+    // Dagger 2
+    implementation(
+            deps.dagger.runtime,
+            deps.dagger.android,
+            deps.dagger.android_support
+    )
+    kapt(
+            deps.dagger.compiler,
+            deps.dagger.android_support_compiler
+    )
+
+    // Kotlin
+    implementation(
+            deps.kotlin.anko,
+            deps.kotlin.stdlib
+    )
+
+    // Google
+    implementation(
+            deps.google.firestore,
+            deps.google.location
+    )
+
+    // Okhttp
+    implementation(
+            deps.okhttp.okhttp3,
+            deps.okhttp.logging_interceptor
+    )
+
+    // Retrofit
+    implementation(
+            deps.retrofit.runtime,
+            deps.retrofit.moshi_converter
+    )
+
+    implementation deps.timber
+
+    // Others
+    implementation(deps.thirdParty.material_drawer_kt) {
+        transitive = true
+    }
+
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation(
+            deps.testing.junit
+    )
+
+    testImplementation(
+            deps.testing.arch_core,
+            deps.testing.espresso_core,
+            deps.testing.espresso_contrib,
+            deps.testing.espresso_intents,
+            deps.testing.junit,
+            deps.testing.mockito_core,
+            deps.testing.mockito_android,
+            deps.testing.mockito_inline
+    )
+}

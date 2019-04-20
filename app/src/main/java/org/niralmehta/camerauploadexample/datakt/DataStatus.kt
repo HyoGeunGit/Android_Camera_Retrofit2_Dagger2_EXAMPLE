@@ -1,0 +1,100 @@
+package org.niralmehta.camerauploadexample.datakt
+
+import com.squareup.moshi.Json
+
+data class DataStatus(
+    @field:Json(name = "data")
+    @Json(name = "data")
+    val data: Data,
+    @field:Json(name = "success")
+    @Json(name = "success")
+    val success: Boolean,
+    @field:Json(name = "status")
+    @Json(name = "status")
+    val status: Int
+)
+
+data class Data(
+    @field:Json(name = "accountId")
+    @Json(name = "accountId")
+    val accountId: Int,
+    @field:Json(name = "accountUrl")
+    @Json(name = "accountUrl")
+    val accountUrl: String?,
+    @field:Json(name = "adType")
+    @Json(name = "adType")
+    val adType: Int,
+    @field:Json(name = "adUrl")
+    @Json(name = "adUrl")
+    val adUrl: String,
+    @field:Json(name = "animated")
+    @Json(name = "animated")
+    val animated: Boolean,
+    @field:Json(name = "bandwidth")
+    @Json(name = "bandwidth")
+    val bandwidth: Int,
+    @field:Json(name = "dateTime")
+    @Json(name = "dateTime")
+    val dateTime: Long,
+    @field:Json(name = "deleteHash")
+    @Json(name = "deleteHash")
+    val deleteHash: String,
+    @field:Json(name = "description")
+    @Json(name = "description")
+    val description: String?,
+    @field:Json(name = "favorite")
+    @Json(name = "favorite")
+    val favorite: Boolean,
+    @field:Json(name = "hasSound")
+    @Json(name = "hasSound")
+    val hasSound: Boolean,
+    @field:Json(name = "height")
+    @Json(name = "height")
+    val height: Int,
+    @field:Json(name = "id")
+    @Json(name = "id")
+    val id: String,
+    @field:Json(name = "inGallery")
+    @Json(name = "inGallery")
+    val inGallery: Boolean,
+    @field:Json(name = "isAd")
+    @Json(name = "isAd")
+    val isAd: Boolean,
+    @field:Json(name = "isMostViral")
+    @Json(name = "isMostViral")
+    val inMostViral: Boolean,
+    @field:Json(name = "link")
+    @Json(name = "link")
+    val link: String,
+    @field:Json(name = "name")
+    @Json(name = "name")
+    val name: String,
+    @field:Json(name = "nsfw")
+    @Json(name = "nsfw")
+    val nsfw: Boolean?,
+    @field:Json(name = "section")
+    @Json(name = "section")
+    val section: String?,
+    @field:Json(name = "size")
+    @Json(name = "size")
+    val size: Int,
+    @field:Json(name = "tags")
+    @Json(name = "tags")
+    val tags: List<String>,
+    @field:Json(name = "title")
+    @Json(name = "title")
+    val title: String?,
+    @field:Json(name = "type")
+    @Json(name = "type")
+    val type: String,
+    @field:Json(name = "views")
+    @Json(name = "views")
+    val views: Int,
+    @field:Json(name = "vote")
+    @Json(name = "vote")
+    val vote: String?,
+    @field:Json(name = "width")
+    @Json(name = "width")
+    val width: Int
+)
+

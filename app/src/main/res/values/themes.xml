@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#95ff93</item>
+        <item name="colorPrimaryDark">@color/darkShade</item>
+        <item name="colorAccent">@color/lightShade</item>
+        <item name="android:textColor">@color/darkShade</item>
+        <item name="android:textColorPrimary">@color/darkShade</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- EditText and input elements style -->
+        <item name="colorControlNormal">@color/lightAccent</item>
+        <item name="android:textColorHint">@color/darkAccentGray</item>
+        <item name="android:statusBarColor">@color/lightAccent</item>
+
+    </style>
+
+    <!-- Toolbar Theme -->
+    <style name="ToolbarTheme" parent="Widget.MaterialComponents.BottomAppBar.Colored">
+        <item name="android:textColorPrimary">@color/lightAccentWhite</item>
+        <item name="android:textColorSecondary">@color/lightAccentWhite</item>
+        <item name="android:background">#1eff29</item>
+        <item name="colorControlNormal">@color/lightAccentWhite</item>
+        <item name="selectableItemBackground">@color/colorPrimary</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        <item name="colorControlHighlight">@color/lightAccent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>
